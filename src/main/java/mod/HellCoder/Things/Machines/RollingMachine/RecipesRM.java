@@ -1,0 +1,108 @@
+package mod.HellCoder.Things.Machines.RollingMachine;
+
+import mod.HellCoder.Things.Items.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class RecipesRM {
+
+    private static final RecipesRM recipeBase = new RecipesRM();
+    /** The list of smelting results. */
+    private Map recipeList = new HashMap();
+    private Map pressureList= new HashMap();
+
+    /**
+     * Used to call methods addSmelting and getSmeltingResult.
+     */
+    public static RecipesRM init() {
+        return recipeBase;
+    }
+
+    private RecipesRM() {
+        this.regBlock(Blocks.iron_block, new ItemStack(ModItems.ironPlate), 250);
+        this.reg(Items.iron_ingot, new ItemStack(ModItems.smallIronPlate), 150);
+        this.reg(Items.leather, new ItemStack(ModItems.Insulator), 100);
+
+
+    }
+
+    public void regBlock(Block p_151393_1_, ItemStack p_151393_2_, int pressure)
+    {
+        this.reg(Item.getItemFromBlock(p_151393_1_), p_151393_2_, pressure);
+    }
+
+    public void reg(Item item, ItemStack stack, int pressure)
+    {
+        this.addList(new ItemStack(item, 1, 32767), stack, pressure);
+    }
+
+    public void addList(ItemStack stack, ItemStack stack2, int pressure)
+    {
+        this.recipeList.put(stack, stack2);
+        this.pressureList.put(stack, Float.valueOf(pressure));
+    }
+
+    /**
+     * Returns the smelting result of an item.
+     */
+    public ItemStack getSmeltingResult(ItemStack p_151395_1_)
+    {
+        Iterator iterator = this.recipeList.entrySet().iterator();
+        Map.Entry entry;
+
+        do
+        {
+            if (!iterator.hasNext())
+            {
+                return null;
+            }
+
+            entry = (Map.Entry)iterator.next();
+        }
+        while (!this.func_151397_a(p_151395_1_, (ItemStack)entry.getKey()));
+
+        return (ItemStack)entry.getValue();
+    }
+
+    public float getPressureUse(ItemStack par1)
+    {
+
+        Iterator iterator = this.pressureList.entrySet().iterator();
+        Map.Entry entry;
+
+        do
+        {
+            if (!iterator.hasNext())
+            {
+                return 0.1F;
+            }
+
+            entry = (Map.Entry)iterator.next();
+        }
+        while (!this.func_151397_a(par1, (ItemStack)entry.getKey()));
+
+        return ((Float)entry.getValue()).floatValue();
+    }
+
+    public float getSmeltingExp(ItemStack item)
+    {
+        return -1; //-1 will default to the old lookups.
+    }
+
+    private boolean func_151397_a(ItemStack p_151397_1_, ItemStack p_151397_2_)
+    {
+        return p_151397_2_.getItem() == p_151397_1_.getItem() && (p_151397_2_.getItemDamage() == 32767 || p_151397_2_.getItemDamage() == p_151397_1_.getItemDamage());
+    }
+
+    public Map getSmeltingList()
+    {
+        return this.recipeList;
+    }
+}

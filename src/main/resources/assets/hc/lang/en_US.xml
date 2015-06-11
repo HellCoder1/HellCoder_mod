@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+    <entry key="itemGroup.HellCoder's mod">HellCoder's mod</entry>
+    
+	<entry key="item.diga.name">Diga Ball</entry>
+	<entry key="item.digaingot.name">Diga Ingot</entry>
+    <entry key="item.Upgrade.name">Block place Upgrade</entry>
+    <entry key="item.CoolantBlock.name">Coolant Block</entry>
+    <entry key="item.GoldRedstoneGear.name">Gold Redstone Gear</entry>
+    <entry key="item.HighTemperaturePlate.name">High Temperature Plate</entry>
+    <entry key="item.IronRedstoneGear.name">Iron Redstone Gear</entry>
+    <entry key="item.MeltingForm.name">Melting Form</entry>
+    <entry key="item.MeltingPlate.name">Melting Plate</entry>
+    <entry key="item.Press.name">Press</entry>
+    <entry key="item.Insulator.name">Insulator</entry>
+    <entry key="item.Rollers.name">Rollers</entry>
+    <entry key="item.IronPlate.name">Iron Plate</entry>
+    <entry key="item.SmallIronPlate.name">Small Iron Plate</entry>
+    <entry key="item.CompressedPlants.name">Compressed Plants</entry>
+    <entry key="item.Raw_Organic_Material.name">Raw Organic Material</entry>
+    <entry key="item.SmallTank.name">Small Tank</entry>
+    <entry key="item.ScytheBlade.name">Scythe Blade</entry>
+    <entry key="item.TermalDispenser.name">Thermal Dispenser</entry>
+    <entry key="item.PressureRegulator.name">Pressure Regulator</entry>
+    <entry key="item.PressureTank.name">Pressure Tank</entry>
+    <entry key="item.SpecialPipe.name">Special Pipe</entry>
+    <entry key="item.Scissors.name">Scissors</entry>
+    <entry key="item.GoldGear.name">Gold Gear</entry>
+    <entry key="item.IronGear.name">Iron Gear</entry>
+    <entry key="item.ingotCopper.name">Copper Ingot</entry>
+    <entry key="item.DevTool.name">§4DevTool</entry>
+
+    <entry key="item.HCHelmet.name">HCHelmet</entry>
+    <entry key="item.HCChest.name">HCChest</entry>
+    <entry key="item.HCLegs.name">HCLegs</entry>
+    <entry key="item.HCBoots.name">HCBoots</entry>
+
+    <entry key="item.Nagibator.name">§4NAGIBATOR</entry>
+    <entry key="item.scythe.name">Scythe§[4WIP]</entry>
+    
+    <entry key="tile.RollingMachine.name">Rolling Machine</entry>
+    <entry key="tile.Fermenter.name">Fermenter</entry>
+    
+	<entry key="tile.digaOre.name">Diga Ore</entry>
+	<entry key="tile.digaBlock.name">Diga Block</entry>
+    <entry key="tile.blockCopper.name">Copper Block</entry>
+    <entry key="tile.oreCopper.name">Copper Ore</entry>
+</properties>

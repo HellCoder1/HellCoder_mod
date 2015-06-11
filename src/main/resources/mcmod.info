@@ -1,0 +1,21 @@
+[
+{
+  "modid": "HC",
+  "name": "HellCoder's mod",
+  "description": "HellCoder's mod",
+  "version": "1.8-1",
+  "mcversion": "1.8",
+  "url": "vk.com/hellcoder",
+  "updateUrl": "",
+  "authorList": [
+    "HellCoder"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

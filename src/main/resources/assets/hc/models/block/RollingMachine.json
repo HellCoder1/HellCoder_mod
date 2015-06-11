@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "hc:blocks/RollingMachine_face",
+        "up": "hc:blocks/RollingMachine_face",
+        "north": "hc:blocks/RollingMachine_face",
+        "east": "hc:blocks/RollingMachine_face",
+        "south": "hc:blocks/RollingMachine_top",
+        "west": "hc:blocks/RollingMachine_face",
+        "particle": "blocks/RollingMachine_top"
+    }
+}
